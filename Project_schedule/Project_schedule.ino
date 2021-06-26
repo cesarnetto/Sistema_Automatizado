@@ -111,15 +111,7 @@ char get_color() {
   B = pulseIn(outPin, LOW);
 }  
 
-  // *********** calibração requerida ***************
-  // O sensor de cor é muito sensível à luz ambiente. Você deve calibrar o seguinte intervalo de valores para chips verdes, vermelhos e amarelos.
-  // Os seguintes valores são obtidos quando um token de cor é colocado em appprox 1 polegada do sensor
-  //Cor
-  // Os valores RGB para tokens são:
-  // vermelho: 30<R<60, 70<G<120, 50<B<90
-  // amarelo: 10<R<25, 10<G<40, 20<B<50
-  // verde: 40<R<70, 20<G<50, 20<B<50 
-
+  
 if((R>40) && (R<85) && (G>90) && (G<220) && (B>70) && (B<160)){    // red
     {
       if (DEBUG) Serial.println("Color is RED");
